@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Book;
 
 class BookController extends Controller
-{
+{ 
     public function getAllBooks() {
         $books = Book::get()->toJson(JSON_PRETTY_PRINT);
         return response($books, 200);
